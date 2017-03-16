@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Github</title>
+    <style>
+        *{ margin: 0;padding: 0; }
+        html,body{ font: 16px/18px "Microsoft Yahei"; }
+        h1,h2{ text-align: center; font-weight: normal;line-height: 4;}
+        pre{font: 16px/1.5 "Microsoft Yahei";}
+        .wrapper{ width: 1000px; margin: 20px auto; }
+        .context{ padding: 20px;font: 14px/1.5 "Microsoft Yahei"; border: 1px solid #e1e1e1; background: #f5f5f5; }
+        .context p{ text-align: center;line-height: 4;font-size: 20px;}
+        .context a{ text-decoration: none;}
+        .context img{ display: block;width: 200px;margin: 0 auto;}
+        .warn{ color:#ff0000; }
+    </style>   
+</head>
+<body>
+    <div class="wrapper">
+        <h1>关于Github</h1>
+        <h2 class="warn">旨在分享,自行体会</h2>
+        <div class="context">
+            <p>Github是什么?</p>
+            <p>是这只猫?</p>
+            <img src="img/02.jpg">
+            <p>当然不是了!!!</p>
+            <p>Github是程序员的网上真人约会场所</p>
+            <p>不信你看!</p>
+            <img src="img/01.jpg" style="width:80%;">
+            <p>强行幽默一次,好,言归正传</p>
+            <p class="warn">如何使用Github交友约会之前,先了解Git是什么!</p>
+            <pre>
+                百科说:
+
+                    Git是一款免费的,开源的分布式版本控制系统,用于敏捷高效地处理任何或小或大的项目(WTF?)
+
+                说人话!
+
+                    Git 是一个管理你的「代码的历史记录」的工具
+            </pre>
+            <p>这里简单介绍Git的作用,不作深入探讨,详细信息<a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/001373962845513aefd77a99f4145f0a2c7a7ca057e7570000" alt="git简介" target="_blank" class="warn">请点击此处!</a></p>
+            <pre>
+                一段碎碎念:
+
+                    可能之前大家写项目练习的时候,都是自己写自己的,最后放在一个文件夹下整合代码.
+                    本来一个人写代码就烦,现在一群人写同一份代码,烦上加烦!
+                    而且每个人都有自己的命名风格,代码习惯,最后合并起来的时候,就出现各式各样的代码,非常不利于阅读和修改bug.
+
+                    如果大家可以同时写同一份代码的话,比如,A君写好了一个css样式后,B君马上就能引用类名使用;
+                    C君写好一个html页面后,D君马上就可以拿到html页面开始写JS操作.
+
+                    这样,团队协作的速度会不会更快,而且也不会出现很多冗余的代码,还加强了团队的沟通.不再是一个人闷声写自己的了.
+
+                    当然,在团队协助写项目的时候,不只是这些问题会发生,还有很多坑没有踩到而已.
+                    
+                    所以我们需要一款工具帮助我们更便捷的完成工作开发任务
+            </pre>
+            <p>满足以上需求的代码管理工具有不少,SVN,Git,老一点的有FTPS</p>
+            <pre>
+                稍微了解了一点点Git是做什么的,那么讲讲Github什么?
+
+                Github是一个网站,给用户提供git服务.
+                这样你就不用自己部署git系统,直接注册一个账号,就能使用Github提供的git服务,完成团队代码合作的事情.
+            </pre>
+            <p class="warn">如果没有疑问的话,我就继续分享下去了</p>
+            <p style="color: #f5f5f5;">有疑问的话,我也不打算停下来,反正今后课程还有安排介绍,今天只分享</p>
+        </div>
+        <h2>如何使用Github?</h2>
+        <div class="context">
+            <pre>
+
+                第一步:注册登录
+                    ... //以下步骤省略
+
+                第二步:瞅一眼你的个人中心
+
+            </pre>
+            <img src="img/03.jpg" style="width:80%;">
+            <pre>
+
+                第三步:瞅一眼进入项目后的画面
+
+            </pre>
+            <img src="img/04.jpg" style="width:80%;">
+            <pre>
+                
+                第四步:教练,我想打篮球...噢不,我想新建一个项目.
+
+            </pre>
+            <img src="img/05.jpg" style="width:80%;">
+
+            <pre>
+                
+                第五步: 进入这个页面,通过命令行将新建的项目与本地文件关联
+
+            </pre>
+
+            <img src="img/06.png" style="width:80%;">
+
+        </div>
+        <h2>如何使用Git命令行</h2>
+        <div class="context">
+            <pre>
+
+                git clone url filesName // 克隆代码到指定文件,不写文件名则默认项目名
+            
+                git add files // 提交指定修改文件
+                    git add -A // 提交所有文件
+                    git add files/* //提交指定修改文件夹下的所有文件
+
+                git status // 查看本地修改文件
+
+                git stash // 保留本地本次修改,并且还原文件
+
+                    git stash pop // 还原修改
+
+                git diff // 查看本地修改文件内容
+                    git diff files //查看本地指定修改文件内容
+
+                git log // 查看提交日志
+
+                git commit -m "about" // 提交暂存区代码,记录说明
+
+                git show commit-id // 查看提交内容
+
+                git pull // 拉取远程代码
+
+                git push // 提交远程代码
+
+                git reset --hard commit-id // 回退到指定提交暂存区
+
+                git checkout files // 放弃本地本次指定文件修改
+
+                    git checkout -b branchName // 新建分支并切换到该新建分支
+
+                    git checkout branchName // 切换到指定分支
+
+                git branch branchName // 新建分支,不切换
+
+                    git branch -A // 查看所有分支
+
+                    git branch -d branchName // 删除指定分支
+
+                git fetch // 获取所有分支的更新
+
+                git merge // 合并分支
+
+                git remote branchName url// 关联远程仓库并与分支建立联系
+    
+            </pre>
+            <p>Git是怎样的一个工作流程</p>
+            <img src="img/07.jpg" style="width:80%;">
+            <p class="warn">大概就这些了!</p>
+        </div>
+    </div>
+</body>
+</html>
